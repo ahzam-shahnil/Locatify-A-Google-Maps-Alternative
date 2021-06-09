@@ -1,0 +1,33 @@
+---
+dependencies:
+  cupertino_icons: ^1.0.3
+  flutter:
+    sdk: flutter
+  google_maps: ^5.1.0
+  transparent_image: ^2.0.0
+  get: ^4.1.4
+  flutter_webview_plugin: ^0.4.0
+description: Locatify is simplest way of locating your loved Ones with Our devices enabled
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+flutter:
+  uses-material-design: true
+  fonts:
+    - family: Product
+      fonts:
+        - asset: fonts/Product-Sans-Bold-Italic.ttf
+          style: italic
+          weight: 900
+        - asset: fonts/Product-Sans-Regular.ttf
+        - asset: fonts/Product-Sans-Bold.ttf
+          weight: 900
+        - asset: fonts/Product-Sans-Italic.ttf
+          style: italic
+  assets:
+    - assets/images/
+name: flutter_projects
+publish_to: none
+version: 1.0.0+1
