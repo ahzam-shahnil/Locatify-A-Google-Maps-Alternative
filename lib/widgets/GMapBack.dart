@@ -10,6 +10,7 @@ double? lng;
 
 Widget getMap({required double lat, required double lng}) {
   String htmlId = Random().nextInt(1000).toString();
+
   // ignore: undefined_prefixed_name
   ui.platformViewRegistry.registerViewFactory(htmlId, (int viewId) {
     final myLatlng = LatLng(lat, lng);
@@ -29,6 +30,7 @@ Widget getMap({required double lat, required double lng}) {
       ..position = myLatlng
       ..map = map
       ..title = 'Current Location!');
+
     var contentString = '<div id="content">' +
         '<div id="siteNotice">' +
         '</div>' +

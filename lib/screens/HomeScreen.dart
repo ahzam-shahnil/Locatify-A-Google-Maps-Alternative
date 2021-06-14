@@ -17,7 +17,7 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         title: FadeInImage.memoryNetwork(
           placeholder: kTransparentImage,
-          image: 'assets/images/locatify_logo.png',
+          image: 'https://designchecker.000webhostapp.com/locatify_logo.png',
           fit: BoxFit.contain,
           height: _height > 560 ? _height * 0.1 : _height * 0.14,
           width: _width > 500 ? _width * 0.1 : _width * 0.14,
@@ -28,25 +28,26 @@ class HomeScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: TextButton(
-                style: TextButton.styleFrom(
-                  primary: Colors.white,
-                  backgroundColor: Colors.blue,
-                  onSurface: Colors.grey,
-                  minimumSize:
-                      Size(MediaQuery.of(context).size.width * 0.09, 40),
+              style: TextButton.styleFrom(
+                primary: Colors.white,
+                backgroundColor: Colors.blue,
+                onSurface: Colors.grey,
+                minimumSize: Size(MediaQuery.of(context).size.width * 0.09, 40),
+              ),
+              onPressed: () => Navigator.pushNamed(context, kSearchScreen),
+              child: Text(
+                'Try Now',
+                style: TextStyle(
+                  fontFamily: 'Product',
+                  color: Colors.white,
+                  fontStyle: FontStyle.normal,
                 ),
-                onPressed: () => Navigator.pushNamed(context, kSearchScreen),
-                child: Text(
-                  'Try Now',
-                  style: TextStyle(
-                    fontFamily: 'Product',
-                    color: Colors.white,
-                    fontStyle: FontStyle.normal,
-                  ),
-                )),
+              ),
+            ),
           )
         ],
       ),
+      //? body of ui
       body: ListView.builder(
         itemCount: _itemCount,
         itemBuilder: (context, index) => Container(
@@ -57,7 +58,8 @@ class HomeScreen extends StatelessWidget {
                 height: _height * 0.85,
                 child: FadeInImage.memoryNetwork(
                   placeholder: kTransparentImage,
-                  image: 'assets/images/navigateworld.png',
+                  image:
+                      'https://designchecker.000webhostapp.com/navigateworld.png',
                 ),
               ),
               Text(

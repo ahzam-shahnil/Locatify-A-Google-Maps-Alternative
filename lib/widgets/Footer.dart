@@ -45,7 +45,7 @@ class Footer extends StatelessWidget {
           ),
           SizedBox(width: 7),
           FadeInImage.memoryNetwork(
-            image: 'assets/images/hbird.png',
+            image: 'https://designchecker.000webhostapp.com/hbird.png',
             placeholder: kTransparentImage,
             width: 30,
             height: 30,

@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_projects/constants.dart';
 import 'package:flutter_projects/controller/PlaceController.dart';
-// import 'package:flutter_projects/screens/maps.dart';
 import 'package:flutter_projects/widgets/GMapBack.dart';
 import 'package:get/get.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 import 'package:flutter/rendering.dart';
-// import 'package:flutter_projects/widgets/Footer.dart';
-// import 'package:transparent_image/transparent_image.dart';
 
 class SearchScreen extends StatefulWidget {
   @override
@@ -36,7 +33,7 @@ class _SearchScreenState extends State<SearchScreen> {
         backgroundColor: Colors.white,
         title: FadeInImage.memoryNetwork(
           placeholder: kTransparentImage,
-          image: 'assets/images/locatify_logo.png',
+          image: 'https://designchecker.000webhostapp.com/locatify_logo.png',
           fit: BoxFit.contain,
           height: _height > 560 ? _height * 0.1 : _height * 0.14,
           width: _width > 500 ? _width * 0.1 : _width * 0.14,
@@ -82,13 +79,17 @@ class _SearchScreenState extends State<SearchScreen> {
                         Size(MediaQuery.of(context).size.width * 0.09, 40),
                   ),
                   onPressed: () {
-                    double lat = double.parse(latTextController.text.trim());
-                    double lng = double.parse(lngTextController.text.trim());
+                    //* to Check if text is not empty
+                    if (lngTextController.text.isNotEmpty &&
+                        lngTextController.text.isNotEmpty) {
+                      double lat = double.parse(latTextController.text.trim());
+                      double lng = double.parse(lngTextController.text.trim());
 
-                    latLngController.updateValue(
-                      latV: lat,
-                      lngV: lng,
-                    );
+                      latLngController.updateValue(
+                        latV: lat,
+                        lngV: lng,
+                      );
+                    }
                   },
                   child: Text(
                     'Search',

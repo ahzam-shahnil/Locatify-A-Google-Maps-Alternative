@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 const kHomeRoute = '/';
+const kThinkReadUrl =
+    'https://api.thingspeak.com/channels/1414842/fields/1.json?api_key=9QFST2QPKRDU49Q9&results=2';
 const kSearchScreen = '/searchMap';
 const kTextInputDecoration = InputDecoration(
   fillColor: Colors.white,
