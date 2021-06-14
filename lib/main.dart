@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_projects/screens/DataScreen.dart';
-// import 'package:flutter_projects/screens/HomeScreen.dart';
 import 'package:flutter_projects/constants.dart';
+import 'package:flutter_projects/screens/HomeScreen.dart';
 import 'package:flutter_projects/screens/SearchScreen.dart';
 import 'package:get/get.dart';
 
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(primarySwatch: Colors.blue),
       initialRoute: kHomeRoute,
       routes: {
-        kHomeRoute: (context) => DataScreen(),
+        kHomeRoute: (context) => HomeScreen(),
         kSearchScreen: (context) => SearchScreen(),
       },
     );
